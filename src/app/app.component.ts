@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroSectionComponent } from './components/intro-section/intro-section.component';
 import { ShowcaseComponent } from './components/showcase/showcase.component';
+import { FeaturePointsComponent } from './components/feature-points/feature-points.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { ShowcaseComponent } from './components/showcase/showcase.component';
     RouterOutlet,
     HeaderComponent,
     IntroSectionComponent,
-    ShowcaseComponent
+    ShowcaseComponent,
+    FeaturePointsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
