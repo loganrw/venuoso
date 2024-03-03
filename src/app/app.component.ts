@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroSectionComponent } from './components/intro-section/intro-section.component';
+import { ShowcaseComponent } from './showcase/showcase.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { IntroSectionComponent } from './components/intro-section/intro-section.
     RouterOutlet,
     HeaderComponent,
     IntroSectionComponent,
+    ShowcaseComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
