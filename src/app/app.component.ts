@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { IntroSectionComponent } from './components/intro-section/intro-section.component';
-import { ShowcaseComponent } from './showcase/showcase.component';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
 
 @Component({
   selector: 'app-root',
