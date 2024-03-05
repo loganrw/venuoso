@@ -5,7 +5,8 @@ import { IntroSectionComponent } from './components/intro-section/intro-section.
 import { ShowcaseComponent } from './components/showcase/showcase.component';
 import { FeaturePointsComponent } from './components/feature-points/feature-points.component';
 import { PricingComponent } from './components/pricing/pricing.component';
-import { CommonModule } from '@angular/common';
+import { LandingSignUpComponent } from './components/landing-sign-up/landing-sign-up.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ import { CommonModule } from '@angular/common';
     IntroSectionComponent,
     ShowcaseComponent,
     FeaturePointsComponent,
-    PricingComponent
+    PricingComponent,
+    LandingSignUpComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
