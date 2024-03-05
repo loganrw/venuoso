@@ -4,6 +4,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { IntroSectionComponent } from './components/intro-section/intro-section.component';
 import { ShowcaseComponent } from './components/showcase/showcase.component';
 import { FeaturePointsComponent } from './components/feature-points/feature-points.component';
+import { PricingComponent } from './components/pricing/pricing.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,8 @@ import { FeaturePointsComponent } from './components/feature-points/feature-poin
     HeaderComponent,
     IntroSectionComponent,
     ShowcaseComponent,
-    FeaturePointsComponent
+    FeaturePointsComponent,
+    PricingComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
