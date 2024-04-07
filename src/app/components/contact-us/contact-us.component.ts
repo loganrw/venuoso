@@ -16,6 +16,7 @@ export class ContactUsComponent {
     this.contactForm = this.formBuilder.group({
       firstName: ['', Validators.required], // Adding Validators is optional but recommended for basic form validation
       lastName: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
       message: ['', Validators.required],
     });
   }
