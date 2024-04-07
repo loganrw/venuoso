@@ -24,9 +24,11 @@ export class ContactUsComponent {
   }
 
   onSubmit(): void {
-    this.contactFormService.callLambda(this.contactForm.value).subscribe((response: any) => {
+    const formData = this.contactForm.value;
+    this.contactFormService.callLambda(formData).subscribe((response: any) => {
       console.log(response);
-    }, (error: any) => { // Explicitly type 'error' as any
+      console.log(formData); // Trying to get output of form data in console to debug.
+    }, (error: any) => {
       console.error(error);
     });
   }
