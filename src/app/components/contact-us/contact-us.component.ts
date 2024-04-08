@@ -19,15 +19,18 @@ export class ContactUsComponent {
       firstName: [''], // Adding Validators is optional but recommended for basic form validation
       lastName: [''],
       phoneNumber: [''],
+      email: [''],
       message: [''],
     });
   }
 
   onSubmit(): void {
-    const formData = this.contactForm.value;
-    this.contactFormService.callLambda(formData).subscribe((response: any) => {
-      console.log(response);
-      console.log(formData); // Trying to get output of form data in console to debug.
+    const firstName = this.contactForm.get('firstName')?.value;
+    const lastName = this.contactForm.get('lastName')?.value;
+    const phoneNumber = this.contactForm.get('phoneNumber')?.value;
+    const email = this.contactForm.get('email')?.value;
+    const message = this.contactForm.get('message')?.value;
+    this.contactFormService.submitForm(firstName, lastName, phoneNumber, email, message).subscribe((response: any) => {
     }, (error: any) => {
       console.error(error);
     });

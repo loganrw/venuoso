@@ -8,8 +8,14 @@ import { Observable } from 'rxjs';
 export class ContactFormService {
   constructor(private http: HttpClient) { }
 
-  callLambda(formData: any): Observable<any> {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json'});
-    return this.http.post('https://3kxqyhatbnmvuwutzkh3pbilo40ndozy.lambda-url.us-east-1.on.aws/', JSON.stringify(formData), { headers: headers});
+  submitForm(firstName: string, lastName: string, phoneNumber: string, email: string, message: string) {
+    const URL = 'https://zjhn34pnog.execute-api.us-east-1.amazonaws.com/Stage-1/contact-us-form'
+    return this.http.post(URL, {
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      email: email,
+      message: message
+    });
   }
 }
