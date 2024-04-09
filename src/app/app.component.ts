@@ -8,6 +8,9 @@ import { FeaturePoints2Component } from './components/feature-points-2/feature-p
 import { PricingComponent } from './components/pricing/pricing.component';
 import { LandingSignUpComponent } from './components/landing-sign-up/landing-sign-up.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component'
+import { ContactFormService } from './services/contact-form/contact-form.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +24,12 @@ import { FooterComponent } from './components/footer/footer.component';
     FeaturePoints2Component,
     PricingComponent,
     LandingSignUpComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent,
+    HttpClientModule,
+  ],
+  providers: [
+    ContactFormService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
