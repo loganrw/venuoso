@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component'
 import { ContactFormService } from './services/contact-form/contact-form.service';
 import { HttpClientModule } from '@angular/common/http';
+import { GetStartedFormService } from './services/get-started-form/get-started-form.service';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     ContactFormService,
+    GetStartedFormService,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
