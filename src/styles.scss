@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities"
+@import "tailwindcss/utilities";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans 3', "Helvetica Neue", sans-serif;
+}
+
+// Mat toggle button overrides
+.mat-button-toggle-group {
+    border-color: #49184f !important;
+    border-width: 4px;
+}
+
+.mat-button-toggle {
+    border-color: #49184f !important;
+
+    span {
+        color: #49184f;
+        font-weight: bold;
+    }
+}
+
+.mat-button-toggle-checked {
+    background-color: #49184f !important;
+
+    span {
+        color: white;
+    }
+}
