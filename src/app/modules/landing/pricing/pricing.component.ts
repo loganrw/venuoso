@@ -1,12 +1,8 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { AnnualPricing, MonthPricing, PricingRate } from '../../models/pricing';
+import { AnnualPricing, MonthPricing, PricingRate } from '../../../models/pricing';
 
 @Component({
   selector: 'app-pricing',
-  standalone: true,
-  imports: [MatButtonToggleModule, CommonModule],
   templateUrl: './pricing.component.html'
 })
 export class PricingComponent {

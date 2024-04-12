@@ -1,0 +1,35 @@
+<div class="rounded-md bg-gray-100 py-8 px-10 flex flex-col mb-10 shadow-md">
+    <div class="mb-8">
+        <span class="text-v-purple text-2xl font-bold">Log In</span>
+    </div>
+    <div class="flex flex-col">
+        <form formGroup="logInForm" class="flex flex-col">
+            <div>
+                <span class="block text-v-purple text-sm mb-2">Username</span>
+                <input class="border-2 appearance-none rounded-md px-8 mb-4 border-v-purple shadow-md" type="text"
+                    formControlName="username" placeholder="Username">
+            </div>
+            <div>
+                <span class="block text-v-purple text-sm mb-2">Password</span>
+                <input class="border-2 appearance-none rounded-md px-8 mb-4 border-v-purple shadow-md" type="password"
+                    formControlName="password" placeholder="Password">
+            </div>
+            <div>
+                <input class="shadow-md border-1 border-solid border-v-purple" type="checkbox"
+                    formControlName="rememberMe"><span class="text-v-blue inline ml-4">Remember Me</span>
+            </div>
+        </form>
+        <div class="ml-10 mt-4">
+            <button class="rounded-full shadow-md bg-white px-4 py-2"><span class="text-v-purple">Continue with
+                    Facebook</span></button>
+        </div>
+        <div class="ml-10 mt-4">
+            <button class="rounded-full shadow-md bg-white px-6 py-2"><span class="text-v-purple">Continue with
+                    Google</span></button>
+        </div>
+        <div class="mt-4 ml-8">
+            <span class="text-v-purple">New to Venuoso?</span>
+            <a href="" class="ml-2 underline text-v-blue hover:mouse-pointer">Sign up Now!</a>
+        </div>
+    </div>
+</div>
