@@ -3,7 +3,8 @@ import { AnnualPricing, MonthPricing, PricingRate } from '../../../models/pricin
 
 @Component({
   selector: 'app-pricing',
-  templateUrl: './pricing.component.html'
+  template: '<!-- component disabled -->',
+  // templateUrl: './pricing.component.html'
 })
 export class PricingComponent {
 

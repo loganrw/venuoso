@@ -5,7 +5,8 @@ import { ContactFormService } from '../../../services/contact-form/contact-form.
 
 @Component({
   selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
+  template: '<!-- component disabled -->',
+  // templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.sass']
 })
 export class ContactUsComponent {

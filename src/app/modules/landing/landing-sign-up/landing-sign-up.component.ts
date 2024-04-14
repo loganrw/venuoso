@@ -3,7 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-landing-sign-up',
-  templateUrl: './landing-sign-up.component.html'
+  template: '<!-- component disabled -->',
+  // templateUrl: './landing-sign-up.component.html'
 })
 export class LandingSignUpComponent {
 
