@@ -1,15 +1,19 @@
-<div class="bg-slate-100 rounded-md sticky shadow-md w-full">
-    <div class="grow h-20 top-0 flex flex-row items-center">
-        <div class="ml-12 w-16 h-16">
+<div [class]="isSticky ? 'z-50 fixed top-0 bg-black text-white transition-colors duration-1000 ease-in-out w-full' : 'z-50 fixed top-0 bg-white text-black transition-colors duration-1000 ease-in-out w-full'">
+    <div class="w-full h-15 flex items-center px-4 lg:px-12 text-lg">
+        <div class="flex-none w-16 h-16">
             <img src="../../../assets/v-logo-small.png" />
         </div>
-        <div class="flex flex-row justify-end grow space-x-12 font-bold ml-[425px] text-v-light-purple">
-            <a class="hover:cursor-pointer hover:underline" href="#features">Features</a>
-            <a class="hover:cursor-pointer hover:underline" href="#pricing">Pricing</a>
-            <a class="hover:cursor-pointer hover:underline" href="#contact-us">Contact</a>
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-12">
+            <a href="#features" (click)="scrollToSection($event, 'features')"
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">HOW IT WORKS</a>
+            <a href="#pricing" (click)="scrollToSection($event, 'pricing')"
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">PRICING PLANS</a>
+            <a href="#contact-us" (click)="scrollToSection($event, 'contact-us')"
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">SUPPORT</a>
         </div>
-        <div class="flex justify-end flex-row grow mr-44 space-x-8">
-            <button class="bg-v-purple rounded text-white py-2 px-6 hover:bg-v-purple-hover">Sign Up</button>
-            <button class="rounded text-v-purple border-v-purple border-2 py-2 px-6 hover:bg-v-purple-hover hover:text-white">Log In</button>
+        <div class="flex-grow flex justify-end space-x-5">
+            <button [class]="isSticky ? 'rounded text-black font-bold bg-amber-200 py-2 px-6 hover:bg-amber-400 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
+            <button [class]="isSticky ? 'rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-800 transition-all duration-3000 text-sm' : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700 transition-all duration-3000'">LOG IN</button>
         </div>
+    </div>
 </div>
