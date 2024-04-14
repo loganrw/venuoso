@@ -1,8 +1,8 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
@@ -26,5 +26,12 @@ export class HeaderComponent {
     } else {
       location.hash = sectionId;
     }
+  }
+
+  constructor(private router: Router) {
+  }
+
+  navigateToPage(page: string) {
+    this.router.navigate(['log-in']);
   }
 }

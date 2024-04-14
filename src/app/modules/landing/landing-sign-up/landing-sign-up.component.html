@@ -1,0 +1,10 @@
+<div class="mt-24 flex flex-col items-center">
+    <span class="text-4xl font-bold text-v-purple">Own a Venue?</span>
+    <span class="text-xl font-bold text-v-purple mt-4 mb-8">Try Venuoso out completely free for a week</span>
+    <div class="flex flex-col w-full" [formGroup]="signUpForm">
+        <input class="border-2 appearance-none rounded-md py-4 px-3 mb-4 border-v-purple" type="text" formControlName="name" placeholder="Name">
+        <input class="border-2 appearance-none rounded-md py-4 px-3 mb-4 border-v-purple" type="email" formControlName="email" placeholder="Email address">
+        <input class="border-2 appearance-none rounded-md py-4 px-3 mb-4 border-v-purple" type="password" formControlName="password" placeholder="Password">
+        <button class="bg-v-purple rounded border-2 text-white py-2 px-6 hover:bg-v-purple-hover hover:text-white mb-20"><span class="text-lg font-semibold">GET STARTED FOR FREE</span></button>
+    </div>
+</div>

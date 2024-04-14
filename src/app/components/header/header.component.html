@@ -13,7 +13,7 @@
         </div>
         <div class="flex-grow flex justify-end space-x-5">
             <button [class]="isSticky ? 'rounded text-black font-bold bg-amber-200 py-2 px-6 hover:bg-amber-400 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
-            <button [class]="isSticky ? 'rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-800 transition-all duration-3000 text-sm' : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700 transition-all duration-3000'">LOG IN</button>
+            <button (click)="navigateToPage('log-in')" [class]="isSticky ? 'rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-800 transition-all duration-3000 text-sm' : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700 transition-all duration-3000'">LOG IN</button>
         </div>
     </div>
 </div>
