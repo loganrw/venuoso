@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FeaturePointsComponent } from './feature-points/feature-points.component';
 import { IntroSectionComponent } from './intro-section/intro-section.component';
-import { LandingSignUpComponent } from './landing-sign-up/landing-sign-up.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -18,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     ContactUsComponent,
     FeaturePointsComponent,    IntroSectionComponent,
-    LandingSignUpComponent,
     PricingComponent,
     ShowcaseComponent,
     LandingPageComponent
