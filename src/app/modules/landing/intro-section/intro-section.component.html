@@ -3,7 +3,7 @@
     <div class="absolute top-0 left-0 w-full h-full">
       <video 
       [autoplay]="true"
-      muted 
+      [muted] ="true"
       class="absolute inset-0 w-full h-full object-cover"
       [loop]="true" 
       [class]="filterClass + ' transition-all duration-1000 ease-in-out'" src="assets/images/trailover.webm">
@@ -13,10 +13,14 @@
   
 
     <!-- overlay content -->
-    <div class="z-20 text-black bg-amber-100 rounded-md w-1/2 p-5 opacity-90">
-      <p class="font-bold text-6xl text-lefty">Helping venues create the perfect event</p>
-      <hr class="w-auto border-t-4 border-black mx-auto pb-4">
-      <p class="text-justify">Planning the event of a lifetime just became easier. Venuoso utilizes an intuitive click-and-drag event builder, enabling your clients to create the perfect event every time. Simply send a link to your client or embed it in your website to give your customers complete planning freedom and receive an exact copy when they are done. Let our custom Event Planner handle all of the details including pricing, payments, inventory, and more. </p>
+    <div class="z-20 rounded-md w-1/2 p-5 shadow-violet-500 shadow-sm border border-black text-white bg-gradient-to-r from-[rgba(20,36,52,0.96)] to-[rgba(28,19,31,0.98)]">
+      <p class="font-sans text-2xl text-center text-violet-100">helping venues create</p>
+      <p class="font-sans text-6xl font-bold text-center pb-4 text-transparent bg-clip-text bg-gradient-to-r from-[rgba(191,213,237)] to-[rgba(209,137,233)]">the perfect event </p>
+      <!-- <span class="font-sans font-semibold text-6xl text-center pb-4">the perfect event</span> -->
+
+
+      <hr class="w-auto border-t-1 border-violet-400 p-4">
+      <p class="text-justify text-lg text-violet-100">Planning the event of a lifetime just became easier. Venuoso utilizes an intuitive click-and-drag event builder, enabling your clients to create the perfect event every time. Simply send a link to your client or embed it in your website to give your customers complete planning freedom and receive an exact copy when they are done. Let our custom Event Planner handle all of the details including pricing, payments, inventory, and more. </p>
     </div>
   </div>
   

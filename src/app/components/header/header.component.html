@@ -5,14 +5,14 @@
         </div>
         <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-12">
             <a href="#features" (click)="scrollToSection($event, 'features')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">HOW IT WORKS</a>
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">HOW IT WORKS</a>
             <a href="#pricing" (click)="scrollToSection($event, 'pricing')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">PRICING PLANS</a>
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">PRICING PLANS</a>
             <a href="#contact-us" (click)="scrollToSection($event, 'contact-us')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-amber-200 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">SUPPORT</a>
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">SUPPORT</a>
         </div>
         <div class="flex-grow flex justify-end space-x-5">
-            <button [class]="isSticky ? 'rounded text-black font-bold bg-amber-200 py-2 px-6 hover:bg-amber-400 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
+            <button [class]="isSticky ? 'rounded text-white font-bold bg-violet-700 py-2 px-6 hover:bg-violet-600 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
             <button (click)="navigateToPage('log-in')" [class]="isSticky ? 'rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-800 transition-all duration-3000 text-sm' : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700 transition-all duration-3000'">LOG IN</button>
         </div>
     </div>
