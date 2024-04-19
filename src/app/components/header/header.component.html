@@ -1,21 +1,26 @@
-<div [class]="isSticky ? 'z-50 fixed top-0 bg-black text-white transition-colors duration-1000 ease-in-out w-full' : 'z-50 fixed top-0 bg-white text-black transition-colors duration-1000 ease-in-out w-full'">
-    <div class="w-full h-15 flex items-center px-4 lg:px-12 text-lg">
+<div [class]="isSticky ? 'z-50 fixed top-0 bg-slate-900 text-white transition-colors duration-1000 ease-in-out w-full' : 'z-50 fixed top-0 bg-zinc-100 text-black transition-colors duration-1000 ease-in-out w-full'">
+    <div class="h-15 flex items-center px-4 lg:px-12 text-lg">
         <div class="flex-none w-16 h-16">
             <img src="../../../assets/v-logo-small.png" />
         </div>
+
         <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-12">
             <a href="#features" (click)="scrollToSection($event, 'features')"
                [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">HOW IT WORKS</a>
-            <a href="#pricing" (click)="scrollToSection($event, 'showcase')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">SHOWCASE</a>
             <a href="#pricing" (click)="scrollToSection($event, 'pricing')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">PRICING PLANS</a>
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">PRICING</a>
             <a href="#contact-us" (click)="scrollToSection($event, 'contact-us')"
-               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">SUPPORT</a>
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">CONTACT</a>
+               <a href="#contact-us" (click)="scrollToSection($event, 'contact-us')"
+               [class]="isSticky ? 'hover:cursor-pointer hover:text-violet-400 hover:font-semibold' : 'hover:cursor-pointer hover:text-black hover:font-bold'">ABOUT</a>
         </div>
+
         <div class="flex-grow flex justify-end space-x-5">
-            <button [class]="isSticky ? 'rounded text-white font-bold bg-violet-700 py-2 px-6 hover:bg-violet-600 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
+            <button [class]="isSticky ? 'rounded text-black font-bold bg-orange-300 py-2 px-6 hover:bg-orange-600 transition-all duration-3000 text-sm': 'hidden'" >SIGN UP</button>
             <button (click)="navigateToPage('log-in')" [class]="isSticky ? 'rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-800 transition-all duration-3000 text-sm' : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700 transition-all duration-3000'">LOG IN</button>
         </div>
+        
     </div>
 </div>
+
+<!-- img source: https://pixabay.com/photos/blueprints-entrepreneur-hands-1837238/ -->
