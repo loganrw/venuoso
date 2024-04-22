@@ -1,52 +1,76 @@
-
-<div class="grid grid-cols-2 min-h-screen bg-black w-screen" id="contact-us">
-  <div class="bg-cover bg-center" style="background-image: url('/assets/images/ven_col_m3.png');">
-    <div class="flex flex-col justify-center h-full p-8 bg-black bg-opacity-50">
-      <div class="mb-4 text-white">
-        <span class="font-bold text-md">📍 ADDRESS</span>
-        <div class="mt-2 mb-6 ml-7">1 CENTRE PLAZA, DENTON, AL, 00029, USA
-        </div>
-      </div>
-      <div class="mb-4 text-white">
-        <span class="font-bold text-md">☎️ CONTACT NUMBER</span>
-          <div class="mt-2 mb-6 ml-7">+1-800-111-1337
-          </div>
-        </div>
-        <div class="text-white">
-          <span class="font-bold text-md">💌 SUPPORT</span>
-          <div class="mt-2 mb-6 ml-7">contact&#64;venuoso.com
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-white flex items-center justify-center">
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="w-full max-w-md p-8">
-      <h2 class="text-2xl font-bold mb-6 text-center">Send Us A Message</h2>
+<div class="grid grid-cols-1 w-full bg-slate-800" id="contact-us">
+  <div class="bg-slate-100 flex items-center justify-center">
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="w-full max-w-md p-8"
+    >
+      <h2 class="text-2xl font-bold mb-6 text-center">CONTACT US</h2>
+      <p class="text-center pb-4">
+        Have a question? Send us a quick message and we will get back to you as
+        soon as possible.
+      </p>
       <div class="flex mb-4">
-        <div class="border-b border-indigo-200 py-1 mr-2 flex-1">
-          <input type="text" id="firstName" formControlName="firstName" placeholder="First Name*" class="bg-transparent text-indigo-500 placeholder-gray-400 w-full focus:outline-none">
+        <div class="border-b border-slate-500 py-1 mr-2 flex-1">
+          <input
+            type="text"
+            id="firstName"
+            formControlName="firstName"
+            placeholder="FIRST NAME*"
+            class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+          />
         </div>
-        <div class="border-b border-indigo-200 py-1 flex-1">
-          <input type="text" id="lastName" formControlName="lastName" placeholder="Last Name*" class="bg-transparent text-indigo-500 placeholder-gray-400 w-full focus:outline-none">
+        <div class="border-b border-slate-500 py-1 flex-1">
+          <input
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            placeholder="LAST NAME*"
+            class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+          />
         </div>
       </div>
-      <div class="border-b border-indigo-200 py-1 mb-4">
-        <input type="email" id="email" formControlName="email" placeholder="Email*" class="bg-transparent text-indigo-500 placeholder-gray-400 w-full focus:outline-none">
+      <div class="border-b border-slate-500 py-1 mb-4">
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="EMAIL ADDRESS*"
+          class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+        />
       </div>
-      <div class="border-b border-indigo-200 py-1 mb-4">
-        <input type="phone" id="phone" formControlName="phoneNumber" placeholder="Phone number" class="bg-transparent text-indigo-500 placeholder-gray-400 w-full focus:outline-none">
+      <div class="border-b border-slate-500 py-1 mb-4">
+        <input
+          type="phone"
+          id="phone"
+          formControlName="phoneNumber"
+          placeholder="PHONE NUMBER"
+          class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+        />
       </div>
-      <div class="border-b border-indigo-200 py-1 mb-4">
-        <textarea id="message" formControlName="message" rows="6" placeholder="Your Message*" class="bg-transparent text-indigo-500 placeholder-gray-400 w-full focus:outline-none bg-slate-50"></textarea>
+      <div class="border-b border-slate-500 py-1 mb-4">
+        <textarea
+          id="message"
+          formControlName="message"
+          rows="6"
+          placeholder="YOUR MESSAGE*"
+          class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none bg-slate-50"
+        ></textarea>
       </div>
       <div class="flex justify-center mt-4">
-        <button type="submit" class="bg-white border-2 hover:bg-purple-700 hover:text-gray-200 text-gray-500 font-extrabold py-2 px-4 w-1/3">
-        SUBMIT &rarr;
+        <button
+          type="submit"
+          class="bg-white border-2 hover:bg-purple-700 hover:text-gray-200 text-gray-500 font-extrabold py-2 px-4 w-1/3"
+        >
+          SUBMIT &rarr;
         </button>
       </div>
-      <div *ngIf="submissionSuccess" class="flex flex-col items-center mt-5 font-semibold bg-violet-300 text-md">
+      <div
+        *ngIf="submissionSuccess"
+        class="flex flex-col items-center mt-5 font-semibold bg-violet-300 text-md"
+      >
         Thank you for your message. We will be in touch soon.
-    </div>
+      </div>
     </form>
   </div>
 </div>
