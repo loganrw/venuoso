@@ -1,15 +1,80 @@
-<div class="bg-slate-100 rounded-md sticky shadow-md w-full">
-    <div class="grow h-20 top-0 flex flex-row items-center">
-        <div class="ml-12 w-16 h-16">
-            <img src="../../../assets/v-logo-small.png" />
-        </div>
-        <div class="flex flex-row justify-end grow space-x-12 font-bold ml-[425px] text-v-light-purple">
-            <a class="hover:cursor-pointer hover:underline" href="#features">Features</a>
-            <a class="hover:cursor-pointer hover:underline" href="#pricing">Pricing</a>
-            <a class="hover:cursor-pointer hover:underline" href="#contact-us">Contact</a>
-        </div>
-        <div class="flex justify-end flex-row grow mr-44 space-x-8">
-            <button class="bg-v-purple rounded text-white py-2 px-6 hover:bg-v-purple-hover">Sign Up</button>
-            <button (click)="navigateToPage('log-in')" class="rounded text-v-purple border-v-purple border-2 py-2 px-6 hover:bg-v-purple-hover hover:text-white">Log In</button>
-        </div>
+<div
+  [class]="
+    isSticky
+      ? 'z-50 fixed left-1/2 transform -translate-x-1/2 bg-slate-800 border-b border-slate-500 text-white transition-colors duration-1000 ease-in-out w-5/6 rounded-b-md'
+      : 'z-50 fixed top-0 left-1/2 transform -translate-x-1/2 bg-slate-100 text-black transition-colors duration-1000 ease-in-out w-5/6 rounded-b-md'
+  "
+>
+  <div class="h-15 flex flex-col-3 items-center px-4 text-lg">
+    <div class="flex-none w-16 h-216 col-start-1">
+      <img src="../../../assets/v-logo-small.png" />
+    </div>
+
+    <div
+      class="absolute left-1/2 transform -translate-x-1/2 flex space-x-12 col-start-2"
+    >
+      <a
+        href="#features"
+        (click)="scrollToSection($event, 'features')"
+        [class]="
+          isSticky
+            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+            : 'hover:cursor-pointer hover:text-black hover:font-bold'
+        "
+        >HOW IT WORKS</a
+      >
+      <a
+        href="#pricing"
+        (click)="scrollToSection($event, 'pricing')"
+        [class]="
+          isSticky
+            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+            : 'hover:cursor-pointer hover:text-black hover:font-bold'
+        "
+        >PRICING</a
+      >
+      <a
+        href="#contact-us"
+        (click)="scrollToSection($event, 'contact-us')"
+        [class]="
+          isSticky
+            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+            : 'hover:cursor-pointer hover:text-black hover:font-bold'
+        "
+        >CONTACT</a
+      >
+      <a
+        href="#contact-us"
+        (click)="scrollToSection($event, 'contact-us')"
+        [class]="
+          isSticky
+            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+            : 'hover:cursor-pointer hover:text-black hover:font-bold'
+        "
+        >ABOUT</a
+      >
+    </div>
+
+    <div class="flex-grow flex justify-end space-x-3 col-start-3">
+      <button
+        [class]="
+          isSticky
+            ? ' shadow-inner shadow-violet-500 rounded text-white font-bold bg-purple-600 py-2 px-6 hover:bg-purple-700 transition-all duration-3000 text-sm'
+            : 'hidden'
+        "
+      >
+        SIGN UP
+      </button>
+      <button
+        (click)="navigateToPage('log-in')"
+        [class]="
+          isSticky
+            ? 'shadow-inner shadow-blue-500 rounded text-white font-bold bg-blue-600 py-2 px-6 hover:bg-blue-700 text-sm'
+            : 'rounded text-white bg-blue-600 py-2 px-6 hover:bg-blue-700'
+        "
+      >
+        LOGIN
+      </button>
+    </div>
+  </div>
 </div>
