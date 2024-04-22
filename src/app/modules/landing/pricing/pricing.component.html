@@ -1,51 +1,181 @@
-<div class="flex flex-col items-center mb-8" id="pricing">
-    <span class="text-2xl font-bold text-v-purple mb-2">Choose your plan</span>
-    <p class="text-lg font-medium border-v-purple">Choose a plan that's right for your venue. Simple pricing. No hidden
-        charges.</p>
-    <mat-button-toggle-group class="mb-8 mt-8" name="planSelection" aria-label="Plan Selection" value="monthly">
-        <mat-button-toggle class="px-8" value="monthly"
-            (change)="togglePricing($event.value)"><span>Monthly</span></mat-button-toggle>
-        <mat-button-toggle class="px-8" value="annually"
-            (change)="togglePricing($event.value)"><span>Annually</span></mat-button-toggle>
-    </mat-button-toggle-group>
-    <img class="absolute float-right ml-[500px] mt-24" src="../../../assets/savings.png">
-    <div>
-        <div class="flex flex-row gap-x-8 text-center">
-            <div class="flex flex-col font-semibold rounded-md bg-v-tan W-1/3 px-16">
-                <span class="font-v-purple mb-8 mt-4">BASIC</span>
-                <span class="text-4xl text-white">{{selectedPricing.basic | currency:'USD':'symbol'}}</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">PERFECT FOR A SINGLE
-                    VENUE</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">CHAT ANYTIME WITH
-                    CLIENTS</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">CUSTOM EDITOR
-                    ACCESS</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-12">UP TO 5 EVENTS A
-                    MONTH</span>
-                <button
-                    class="bg-v-tan rounded border-2 border-v-purple text-v-purple py-2 px-6 hover:bg-v-purple-hover hover:text-white mb-20"><span
-                        class="text-lg font-semibold">Subscribe</span></button>
-            </div>
-            <div class="flex flex-col font-semibold rounded-md bg-v-tan W-1/3 px-16">
-                <span class="font-v-purple mb-8 mt-4">PRO</span>
-                <span class="text-4xl text-white">{{selectedPricing.professional | currency:'USD':'symbol'}}</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">ALL BASIC FEATURES, PLUS:</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">INVENTORY MANAGEMENT</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">COST ESTIMATES FOR CLIENTS</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-12">UP TO 15 EVENTS A MONTH</span>
-                <button
-                    class="bg-v-tan rounded border-2 border-v-purple text-v-purple py-2 px-6 hover:bg-v-purple-hover hover:text-white mb-20"><span
-                        class="text-lg font-semibold">Subscribe</span></button>
-            </div>
-            <div class="flex flex-col font-semibold rounded-md bg-v-tan W-1/3 px-12">
-                <span class="font-v-purple mb-8 mt-4">PREMIUM</span>
-                <span class="text-4xl text-white">{{selectedPricing.enterprise | currency:'USD':'symbol'}}</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">ALL PRO FEATURES, PLUS:</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">EARLY ACCESS TO NEW FEATURES</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-2">UNLIMITED EVENTS</span>
-                <span class="text-v-purple mt-8 underline underline-offset-8 decoration-white mb-12">AND MORE..</span>
-                <button class="bg-v-tan rounded border-2 border-v-purple text-v-purple py-2 px-6 hover:bg-v-purple-hover hover:text-white mb-20"><span class="text-lg font-semibold">Subscribe</span></button>
-            </div>
-        </div>
+<div class="flex flex-col items-center bg-slate-800 py-24" id="pricing">
+  <div class="grid grid-cols-4 gap-6 w-5/6 mx-auto">
+    <!-- Title Plan Card -->
+    <div class="p-4 text-white rounded-md">
+      <p class="font-extrabold text-6xl">
+        PICK YOUR PLAN<br />
+        →→→
+      </p>
     </div>
+
+    <!-- Card 1 -->
+    <div class="p-4 bg-stone-100 text-black rounded-md text-center">
+      <p class="font-extrabold text-2xl">
+        <img
+          src="assets/images/pricing_ribbon.png"
+          class="inline-block mr-2 h-2/12 w-2/12 pb-2"
+        />
+        <br />BASIC
+      </p>
+      <hr class="w-auto border-1 border-slate-900" />
+      <p class="pt-4 text-3xl">$9.99 USD/month</p>
+      <p>
+        <button
+          class="bg-blue-400 rounded-md border border-gray-700 p-2 text-md shadow-sm shadow-black active:shadow-none"
+        >
+          ADD TO CART
+        </button>
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="p-4 bg-stone-200 text-black rounded-md text-center">
+      <p class="font-extrabold text-2xl">
+        <img
+          src="assets/images/pricing_ribbon.png"
+          class="inline-block mr-2 h-2/12 w-2/12 pb-2"
+        />
+        <br />PRO
+      </p>
+      <hr class="w-auto border-1 border-gray-900" />
+      <p class="pt-4 text-3xl">$19.99 USD/month</p>
+      <p>
+        <button
+          class="bg-blue-400 rounded-md border border-gray-700 p-2 text-md shadow-sm shadow-black active:shadow-none"
+        >
+          ADD TO CART
+        </button>
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div
+      class="p-4 bg-stone-300 text-black rounded-md text-center border border-blue-100"
+    >
+      <p class="font-extrabold text-2xl">
+        <img
+          src="assets/images/pricing_ribbon.png"
+          class="inline-block mr-2 h-2/12 w-2/12 pb-2"
+        />
+        <br />PRO MAX
+      </p>
+      <hr class="w-auto border-1 border-gray-900" />
+      <p class="pt-4 text-3xl">$29.99 USD/month</p>
+      <p>
+        <button
+          class="bg-blue-400 rounded-md border border-gray-700 p-2 text-md shadow-sm shadow-black active:shadow-none"
+        >
+          ADD TO CART
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <div class="w-5/6 mx-auto overflow-x-auto rounded-md my-6">
+    <table class="w-full text-blue-200 text-lg">
+      <thead>
+        <tr>
+          <th class="text-left p-4 w-1/4">FEATURES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_list.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Custom Templates
+          </td>
+          <td class="text-left p-4 w-1/4">5</td>
+          <td class="text-left p-4 w-1/4">50</td>
+          <td class="text-left p-4 w-1/4">Unlimited</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_cog.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Chat Support
+          </td>
+          <td class="text-left p-4 w-1/4">FCFS</td>
+          <td class="text-left p-4 w-1/4">High</td>
+          <td class="text-left p-4 w-1/4">Priority Queue</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_home.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 3
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_lock.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 4
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_icon.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 5
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_icon.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 6
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_icon.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 7
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+        <tr class="border-y border-slate-400">
+          <td class="text-left p-4 flex items-center">
+            <img
+              src="assets/images/pricing_icon.png"
+              class="inline-block mr-2 h-5 w-5"
+            />
+            Item Type 8
+          </td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+          <td class="text-left p-4 w-1/4">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
