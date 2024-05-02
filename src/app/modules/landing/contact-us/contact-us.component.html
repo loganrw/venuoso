@@ -1,24 +1,11 @@
-<div class="flex flex-col items-center bg-slate-800 py-20" id="contact-us">
-  <div class="grid grid-cols-3 gap-6 w-5/6 mx-auto">
+<div class="bg-slate-800 py-20 text-sm" id="contact-us">
+  <div class="items-center">
     <!-- Contact Card 1 left -->
-    <div class="bg-stone-50 text-black rounded-md p-6">
-      <p class="font-semibold text-3xl">📱 SOCIAL MEDIA</p>
-      <hr class="w-auto border-1 border-slate-900 pb-4" />
-      <p class="text-1xl">INSTAGRAM: &#64;Venuoso</p>
-      <p class="text-1xl">FACEBOOK: &#64;Venuoso</p>
-      <p class="text-1xl">X.COM: &#64;Venuoso</p>
-      <p class="font-semibold text-3xl pt-4">✆ ADDITIONAL</p>
-      <hr class="w-auto border-1 border-slate-900 pb-4" />
-      <p class="text-1xl">Phone: 1-888-700-5000 (Mon-Sat / 9-6 EST)</p>
-      <p class="text-1xl">Email: support&#64;venuoso.com</p>
-      <p class="text-1xl">Mailing Address: P.O. Box 53029</p>
-    </div>
-    <!-- Contact Card 2 left -->
-    <div class="bg-stone-50 text-black rounded-md text-center p-6">
+    <div class="bg-slate-100 text-black rounded-md p-6 w-1/2 mx-auto">
       <form
         [formGroup]="contactForm"
         (ngSubmit)="onSubmit()"
-        class="w-full max-w-md"
+        class=""
       >
         <p class="text-3xl font-bold mb-6 text-center">SEND A MESSAGE</p>
         <p class="text-center pb-4">
@@ -32,7 +19,7 @@
               id="firstName"
               formControlName="firstName"
               placeholder="FIRST NAME*"
-              class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+              class="bg-transparent text-black placeholder-gray-400 w-full focus:outline-none"
             />
           </div>
           <div class="border-b border-slate-500 py-1 flex-1">
@@ -41,7 +28,7 @@
               id="lastName"
               formControlName="lastName"
               placeholder="LAST NAME*"
-              class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+              class="bg-transparent text-black placeholder-gray-400 w-full focus:outline-none"
             />
           </div>
         </div>
@@ -51,7 +38,7 @@
             id="email"
             formControlName="email"
             placeholder="EMAIL ADDRESS*"
-            class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+            class="bg-transparent text-black placeholder-gray-400 w-full focus:outline-none"
           />
         </div>
         <div class="border-b border-slate-500 py-1 mb-4">
@@ -60,7 +47,7 @@
             id="phone"
             formControlName="phoneNumber"
             placeholder="PHONE NUMBER"
-            class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none"
+            class="bg-transparent text-black placeholder-gray-400 w-full focus:outline-none"
           />
         </div>
         <div class="border-b border-slate-500 py-1 mb-4">
@@ -69,13 +56,13 @@
             formControlName="message"
             rows="6"
             placeholder="YOUR MESSAGE*"
-            class="bg-transparent text-black placeholder-gray-300 w-full focus:outline-none bg-slate-50"
+            class="bg-transparent text-black placeholder-gray-400 w-full focus:outline-none bg-slate-50"
           ></textarea>
         </div>
         <div class="flex justify-center mt-4">
           <button
             type="submit"
-            class="bg-white border-2 hover:bg-purple-400 hover:text-black text-gray-500 font-extrabold py-2 px-4 w-1/2"
+            class="bg-white border-2 hover:bg-slate-700 hover:text-white text-gray-500 font-extrabold py-2 px-4 w-1/2"
           >
             SUBMIT &rarr;
           </button>
@@ -89,8 +76,5 @@
       </form>
     </div>
 
-    <div class="p-4 text-white rounded-md">
-      <p class="font-extrabold text-6xl text-right">CONNECT ← WITH ← US</p>
-    </div>
   </div>
 </div>
