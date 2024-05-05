@@ -8,6 +8,7 @@ import { LandingModule } from "./modules/landing/landing.module";
 import { LogInModule } from "./modules/log-in/log-in.module";
 import { ContactFormService } from "./services/contact-form/contact-form.service";
 import { BrowserModule } from "@angular/platform-browser";
+import { AboutUsModule } from "./modules/about-us/about-us.module";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { BrowserModule } from "@angular/platform-browser";
         LandingModule,
         LogInModule,
         BrowserModule,
+        AboutUsModule,
     ],
     providers: [
         provideAnimationsAsync(),

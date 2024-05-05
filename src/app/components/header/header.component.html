@@ -34,7 +34,7 @@
         >PRICING</a
       >
       <a
-        href="#contact-us"
+        routerLink="/about-us"
         (click)="scrollToSection($event, 'contact-us')"
         [class]="
           isSticky
@@ -45,7 +45,6 @@
       >
       <a
         href="#contact-us"
-        (click)="scrollToSection($event, 'contact-us')"
         [class]="
           isSticky
             ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
