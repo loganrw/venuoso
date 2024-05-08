@@ -8,6 +8,14 @@ import { LogInService } from '../services/log-in.service';
 })
 export class LogInComponent implements OnInit {
 
+  mode = 'login';
+
+  toggleMode(targetMode: string) {
+    if(this.mode !== targetMode){
+      this.mode = targetMode;
+    }
+  }
+
   public logInForm: FormGroup;
 
   constructor(private fb: FormBuilder, private logInService: LogInService) {
