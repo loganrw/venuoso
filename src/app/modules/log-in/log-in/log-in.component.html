@@ -1,7 +1,6 @@
 <div
-  class="w-full h-full flex justify-center items-center overflow-hidden py-16 bg-slate-800 bg-cover"
+  class="w-full h-full flex justify-center items-center overflow-hidden py-16 bg-cover bg-gradient-to-tr from-blue-200 to-violet-300"
   id="log-in"
-  style="background-image: url('/assets/images/signlogin_bg.jpg')"
 >
   <div
     class="grid grid-cols-2 w-2/3 h-5/6 gap-0 bg-white rounded-lg shadow-sm shadow-gray-700"
@@ -17,7 +16,7 @@
       <div class="mx-auto w-full">
         <!-- Sign up / Login switch -->
         <div
-          class="flex justify-evenly text-slate-300 text-lg font-bold w-full mx-auto bg-gray-300"
+          class="flex justify-evenly text-slate-300 text-lg font-bold w-full mx-auto bg-gray-300 rounded-tr-lg" id="sign-up"
         >
           <button
             type="button"
@@ -35,7 +34,7 @@
             (click)="toggleMode('login')"
             class="text-lg font-bold {{
               mode === 'login'
-                ? 'text-black bg-white border-t-4 border-gray-300 w-full p-2'
+                ? 'text-black bg-white border-t-4 border-gray-300 w-full p-2 rounded-tr-lg'
                 : 'text-slate-400 w-full p-2 pt-3'
             }}"
           >
@@ -52,7 +51,7 @@
                 type="text"
                 formControlName="firstName"
                 placeholder="John"
-                class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+                class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
               />
             </div>
             <div class="mt-3">
@@ -61,7 +60,7 @@
                 type="text"
                 formControlName="lastName"
                 placeholder="Smith"
-                class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+                class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
               />
             </div>
           </div>
@@ -71,7 +70,7 @@
               type="text"
               formControlName="email"
               placeholder="Your email"
-              class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
             />
           </div>
           <div class="mt-3">
@@ -80,13 +79,13 @@
               type="password"
               formControlName="password"
               placeholder="Your password"
-              class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
             />
           </div>
           <button
             *ngIf="mode === 'signup'"
             type="submit"
-            class="bg-violet-800 border-1 rounded-lg hover:bg-violet-600 text-white font-extrabold p-2 w-full mt-6"
+            class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-500 ring-1 ring-blue-600 mt-6 w-full"
           >
             SIGN UP &rarr;
           </button>
@@ -100,7 +99,7 @@
               type="text"
               formControlName="email"
               placeholder="Your email"
-              class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
             />
           </div>
           <div class="mt-3">
@@ -109,13 +108,13 @@
               type="password"
               formControlName="password"
               placeholder="Your password"
-              class="text-black placeholder-violet-400 w-full focus:outline-none bg-violet-200 rounded-lg p-2"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-slate-700 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
             />
           </div>
           <button
             *ngIf="mode === 'login'"
             type="submit"
-            class="bg-violet-800 border-1 rounded-lg hover:bg-violet-600 text-white font-extrabold p-2 w-full mt-6"
+            class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-500 ring-1 ring-blue-600 mt-6 w-full"
           >
             LOGIN &rarr;
           </button>
@@ -126,33 +125,29 @@
 
         <!-- Always visible social buttons -->
         <div class="w-full text-center mt-5">Quick sign-in with</div>
-        <div class="grid grid-cols-4 items-center p-4 gap-1 mx-auto w-full">
+        <div class="grid grid-cols-4 items-center p-4 gap-3 mx-auto w-full">
           <button
-            class="border-2 border-violet-300 shadow-sm bg-white p-1 w-full mx-auto"
+            class="ring-1 ring-gray-700 shadow-sm shadow-black bg-white p-1 w-full mx-auto"
           >
-            <span class="text-v-purple">Facebook</span>
+            <span class="text-black">Facebook</span>
           </button>
           <button
-            class="border-2 border-violet-300 shadow-sm bg-white p-1 w-full mx-auto"
+            class="ring-1 ring-gray-700 shadow-sm shadow-black bg-white p-1 w-full mx-auto"
           >
-            <span class="text-v-purple">Google</span>
+            <span class="text-black">Google</span>
           </button>
           <button
-            class="border-2 border-violet-300 shadow-sm bg-white p-1 w-full mx-auto"
+            class="ring-1 ring-gray-700 shadow-sm shadow-black bg-white p-1 w-full mx-auto"
           >
-            <span class="text-v-purple">X</span>
+            <span class="text-black">X</span>
           </button>
           <button
-            class="border-2 border-violet-300 shadow-sm bg-white p-1 w-full mx-auto"
+            class="ring-1 ring-gray-700 shadow-sm shadow-black bg-white p-1 w-full mx-auto"
           >
-            <span class="text-v-purple">Discord</span>
+            <span class="text-black">Discord</span>
           </button>
         </div>
       </div>
     </form>
   </div>
-
-  <!-- Background source: 
-Photo by veeterzy from Pexels: 
-https://www.pexels.com/photo/silhouette-photo-of-a-mountain-during-sunset-114979/ -->
 </div>
