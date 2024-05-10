@@ -13,10 +13,10 @@
 
     <!-- Right side with form -->
     <form formGroup="signin" class="w-full">
-      <div class="mx-auto w-full">
+      <div class="w-full">
         <!-- Sign up / Login switch -->
         <div
-          class="flex justify-evenly text-slate-300 text-lg font-bold w-full mx-auto bg-gray-300 rounded-tr-lg"
+          class="flex justify-evenly text-slate-300 text-lg font-bold w-full bg-gray-300 rounded-tr-lg"
           id="sign-up"
         >
           <button
@@ -45,7 +45,7 @@
 
         <!-- Sign up field -->
         <div *ngIf="mode === 'signup'" class="p-4">
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-4 w-full">
             <div class="mt-3">
               <div class="pltext-slate-700 font-bold">First Name</div>
               <input
@@ -126,26 +126,31 @@
 
         <!-- Always visible social buttons -->
         <div class="w-full text-center mt-5">Quick sign-in with</div>
-        <div class="grid grid-cols-4 items-center p-4 px-20 mx-auto w-full">
+        <div class="grid grid-cols-4 items-center p-4 gap-2 w-full">
           <button
-            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-blue-700 rounded-sm"
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-blue-700 rounded-sm"
           >
             <mat-icon class="text-white">facebook</mat-icon>
+            <span class="text-white pl-1">Facebook</span>
           </button>
+
           <button
-            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-orange-600 rounded-sm"
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-orange-600 rounded-sm"
           >
             <mat-icon class="text-white">people</mat-icon>
+            <span class="text-white pl-1">Google</span>
           </button>
           <button
-            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-black rounded-sm"
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-black rounded-sm"
           >
             <mat-icon class="text-white">close</mat-icon>
+            <span class="text-white pl-1">.com</span>
           </button>
           <button
-            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-blue-500 rounded-sm"
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-blue-500 rounded-sm"
           >
             <mat-icon class="text-white">discord</mat-icon>
+            <span class="text-white pl-1">Discord</span>
           </button>
         </div>
       </div>
