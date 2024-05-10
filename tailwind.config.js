@@ -14,12 +14,23 @@ module.exports = {
         'v-purple': '#49184f',
         'v-purple-hover': "#5a2260",
         'v-blue': '#91a6b8',
+        'v-light-blue-gray': '#f2f5fc',
         'v-rose': '#945d5e',
         'v-tan': '#dda77b'
       },
       fontFamily: {
         'sans': ['"Source Sans 3"', ...defaultTheme.fontFamily.sans]
-      }
+      },
+      fontSize: {
+        '4.5xl': '2.75rem',
+        'lg/xl': '1.2rem',
+      },
+      width: {
+        'cus-45': '45%',
+      },
+      // lineHeight: {
+      //   'leading-extra-tight': '3rem',
+      // },
     },
   },
   plugins: [],
