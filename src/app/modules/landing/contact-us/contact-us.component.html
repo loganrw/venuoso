@@ -4,66 +4,86 @@
   style="background-image: url('/assets/images/chairs-table.jpg')"
 >
   <div class="items-center w-1/2 mx-auto">
-    <div class="bg-blue-50 rounded-md p-6 w-2/3 mx-auto shadow-violet-700">
+    <div
+      class="bg-white rounded-md p-6 w-2/3 mx-auto shadow-violet-700 ring-1 ring-slate-700"
+    >
       <form
         [formGroup]="contactForm"
         (ngSubmit)="onSubmit()"
         class="text-black"
       >
-        <p class="font-bold mb-6 text-center text-2xl">💌 SEND A MESSAGE</p>
+        <p class="font-bold mb-6 text-2xl">SEND A MESSAGE</p>
         <hr class="border-1 border-solid border-black pb-5" />
-        <p class="text-center pb-4">
+        <p class="pb-4">
           Have a question? Fill this form and we will get back to you as soon as
           possible.
         </p>
 
-        <div class="flex mb-4 gap-2">
-          <div class="w-1/2">
+        <div class="flex gap-4">
+          <div class="mb-4 relative">
+            <mat-icon
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+              >person</mat-icon
+            >
             <input
               type="text"
               id="firstName"
               formControlName="firstName"
-              placeholder="First Name*"
-              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-400 ring-1 ring-gray-400"
+              placeholder="First Name *"
+              class="pl-9 bg-slate-200 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-500"
             />
           </div>
-          <div class="w-1/2">
+
+          <div class="mb-4 relative">
+            <mat-icon
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+              >person</mat-icon
+            >
             <input
               type="text"
               id="lastName"
               formControlName="lastName"
-              placeholder="Last Name*"
-              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-400"
+              placeholder="Last Name *"
+              class="pl-9 bg-slate-200 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-500"
             />
           </div>
         </div>
 
-        <div class="mb-4">
+        <div class="mb-4 relative">
+          <mat-icon
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+            >email</mat-icon
+          >
           <input
             type="email"
             id="email"
             formControlName="email"
-            placeholder="Email Address*"
-            class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-400"
+            placeholder="Email Address *"
+            class="pl-9 bg-slate-200 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-500"
           />
         </div>
 
-        <div class="mb-4">
+        <div class="mb-4 relative">
+          <mat-icon
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500"
+            >phone</mat-icon
+          >
           <input
-            type="phone"
+            type="tel"
             id="phone"
             formControlName="phoneNumber"
-            placeholder="Phone Number"
-            class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-400"
+            placeholder="Phone Number (optional)"
+            class="pl-9 bg-slate-200 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-500"
           />
         </div>
+
         <div class="mb-4">
           <textarea
             id="message"
             formControlName="message"
             rows="6"
-            placeholder="Your Message*"
-            class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-400"
+            placeholder="Your Message *"
+            class="bg-slate-200 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-gray-500 ring-1 ring-gray-500"
           ></textarea>
         </div>
         <div class="flex justify-center mt-4">
@@ -76,7 +96,7 @@
         </div>
         <div
           *ngIf="submissionSuccess"
-          class="flex flex-col items-center text-center mt-4 font-semibold bg-slate-300 text-md py-5 shadow-sm shadow-slate-200 rounded-md ring-1 ring-gray-500"
+          class="flex flex-col items-center text-center mt-4 font-semibold bg-slate-200 text-md py-5 shadow-sm shadow-slate-200 rounded-md ring-1 ring-gray-500"
         >
           Thank you for your message. We will be in touch soon!
         </div>
