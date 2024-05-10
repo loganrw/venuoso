@@ -47,7 +47,7 @@
         <div *ngIf="mode === 'signup'" class="p-4">
           <div class="grid grid-cols-2 gap-4 w-full">
             <div class="mt-3">
-              <div class="pltext-slate-700 font-bold">First Name</div>
+              <div class="text-slate-700 font-bold">First Name</div>
               <input
                 type="text"
                 formControlName="firstName"
@@ -56,7 +56,7 @@
               />
             </div>
             <div class="mt-3">
-              <div class="pltext-slate-700 font-bold">Last Name</div>
+              <div class="text-slate-700 font-bold">Last Name</div>
               <input
                 type="text"
                 formControlName="lastName"
@@ -65,6 +65,35 @@
               />
             </div>
           </div>
+          <div class="mt-3">
+            <div class="text-slate-700 font-bold">Email</div>
+            <input
+              type="text"
+              formControlName="email"
+              placeholder="Your email"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <div class="mt-3">
+            <div class="text-slate-700 font-bold">Password</div>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Your password"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <button
+            *ngIf="mode === 'signup'"
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-700 hover:shadow-none ring-1 ring-blue-600 mt-6 w-full transition-all"
+          >
+            SIGN UP &rarr;
+          </button>
+        </div>
+
+        <!-- Login field -->
+        <div *ngIf="mode === 'login'" class="p-4">
           <div class="mt-3">
             <div class="pltext-slate-700 font-bold">Email</div>
             <input
@@ -84,13 +113,15 @@
             />
           </div>
           <button
-            *ngIf="mode === 'signup'"
+            *ngIf="mode === 'login'"
             type="submit"
             class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-700 hover:shadow-none ring-1 ring-blue-600 mt-6 w-full transition-all"
           >
-            SIGN UP &rarr;
+            LOGIN &rarr;
           </button>
-        </div>
+          <div *ngIf="mode === 'login'" class="text-black mt-5 text-center">
+            Forgot Password?
+          </div>
 
         <!-- Login field -->
         <div *ngIf="mode === 'login'" class="p-4">
@@ -154,6 +185,6 @@
           </button>
         </div>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>

@@ -28,6 +28,12 @@ export class HeaderComponent {
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' });
       }
+    // If the current route is landing, scroll to section
+    if (this.router.url.includes('landing')) {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       // If the current route is not landing, first load the landing module and then smooth-scroll to section
       this.router.navigate(['/landing'], { fragment: sectionId }).then(() => {
