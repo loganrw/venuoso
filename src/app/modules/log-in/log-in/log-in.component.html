@@ -1,35 +1,154 @@
-<div class="rounded-md bg-gray-100 py-8 px-10 flex flex-col mb-10 shadow-md">
-    <div class="mb-8">
-        <span class="text-v-purple text-2xl font-bold">Log In</span>
-    </div>
-    <div class="flex flex-col">
-        <form formGroup="logInForm" class="flex flex-col">
-            <div>
-                <span class="block text-v-purple text-sm mb-2">Username</span>
-                <input class="border-2 appearance-none rounded-md px-8 mb-4 border-v-purple shadow-md" type="text"
-                    formControlName="username" placeholder="Username">
-            </div>
-            <div>
-                <span class="block text-v-purple text-sm mb-2">Password</span>
-                <input class="border-2 appearance-none rounded-md px-8 mb-4 border-v-purple shadow-md" type="password"
-                    formControlName="password" placeholder="Password">
-            </div>
-            <div>
-                <input class="shadow-md border-1 border-solid border-v-purple" type="checkbox"
-                    formControlName="rememberMe"><span class="text-v-blue inline ml-4">Remember Me</span>
-            </div>
-        </form>
-        <div class="ml-10 mt-4">
-            <button class="rounded-full shadow-md bg-white px-4 py-2"><span class="text-v-purple">Continue with
-                    Facebook</span></button>
+<div
+  class="w-full h-full flex justify-center items-center overflow-hidden py-16 bg-cover bg-gradient-to-tr from-blue-200 to-violet-300"
+  id="log-in"
+>
+  <div
+    class="grid grid-cols-2 w-2/3 h-5/6 gap-0 bg-white rounded-lg shadow-sm shadow-gray-700"
+  >
+    <!-- Left side with static image -->
+    <div
+      class="bg-slate-100 col-span-1 p-2 rounded-l-lg bg-cover"
+      style="background-image: url('/assets/images/login_temp.jpg')"
+    ></div>
+
+    <!-- Right side with form -->
+    <form formGroup="signin" class="w-full">
+      <div class="mx-auto w-full">
+        <!-- Sign up / Login switch -->
+        <div
+          class="flex justify-evenly text-slate-300 text-lg font-bold w-full mx-auto bg-gray-300 rounded-tr-lg"
+          id="sign-up"
+        >
+          <button
+            type="button"
+            (click)="toggleMode('signup')"
+            class="text-lg font-bold {{
+              mode === 'signup'
+                ? 'text-black w-full bg-white border-t-4 border-gray-300 p-2'
+                : 'text-slate-400 w-full p-2 pt-3 hover:text-slate-500'
+            }}"
+          >
+            SIGN UP
+          </button>
+          <button
+            type="button"
+            (click)="toggleMode('login')"
+            class="text-lg font-bold {{
+              mode === 'login'
+                ? 'text-black bg-white border-t-4 border-gray-300 w-full p-2 rounded-tr-lg'
+                : 'text-slate-400 w-full p-2 pt-3 hover:text-slate-500'
+            }}"
+          >
+            LOGIN
+          </button>
         </div>
-        <div class="ml-10 mt-4">
-            <button class="rounded-full shadow-md bg-white px-6 py-2"><span class="text-v-purple">Continue with
-                    Google</span></button>
+
+        <!-- Sign up field -->
+        <div *ngIf="mode === 'signup'" class="p-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="mt-3">
+              <div class="pltext-slate-700 font-bold">First Name</div>
+              <input
+                type="text"
+                formControlName="firstName"
+                placeholder="John"
+                class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+              />
+            </div>
+            <div class="mt-3">
+              <div class="pltext-slate-700 font-bold">Last Name</div>
+              <input
+                type="text"
+                formControlName="lastName"
+                placeholder="Smith"
+                class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+              />
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="pltext-slate-700 font-bold">Email</div>
+            <input
+              type="text"
+              formControlName="email"
+              placeholder="Your email"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <div class="mt-3">
+            <div class="pltext-slate-700 font-bold">Password</div>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Your password"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <button
+            *ngIf="mode === 'signup'"
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-700 hover:shadow-none ring-1 ring-blue-600 mt-6 w-full transition-all"
+          >
+            SIGN UP &rarr;
+          </button>
         </div>
-        <div class="mt-4 ml-8">
-            <span class="text-v-purple">New to Venuoso?</span>
-            <a href="" class="ml-2 underline text-v-blue hover:mouse-pointer">Sign up Now!</a>
+
+        <!-- Login field -->
+        <div *ngIf="mode === 'login'" class="p-4">
+          <div class="mt-3">
+            <div class="pltext-slate-700 font-bold">Email</div>
+            <input
+              type="text"
+              formControlName="email"
+              placeholder="Your email"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <div class="mt-3">
+            <div class="pltext-slate-700 font-bold">Password</div>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Your password"
+              class="bg-slate-300 text-black placeholder-gray-500 w-full focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-600 transition duration-300 ease-in-out rounded-md p-2 shadow-sm shadow-black ring-1 ring-gray-400"
+            />
+          </div>
+          <button
+            *ngIf="mode === 'login'"
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 hover:text-white text-slate-100 font-extrabold py-2 px-4 rounded-md shadow-sm shadow-slate-700 hover:shadow-none ring-1 ring-blue-600 mt-6 w-full transition-all"
+          >
+            LOGIN &rarr;
+          </button>
+          <div *ngIf="mode === 'login'" class="text-black mt-5 text-center">
+            Forgot Password?
+          </div>
         </div>
-    </div>
+
+        <!-- Always visible social buttons -->
+        <div class="w-full text-center mt-5">Quick sign-in with</div>
+        <div class="grid grid-cols-4 items-center p-4 px-20 mx-auto w-full">
+          <button
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-blue-700 rounded-sm"
+          >
+            <mat-icon class="text-white">facebook</mat-icon>
+          </button>
+          <button
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-orange-600 rounded-sm"
+          >
+            <mat-icon class="text-white">people</mat-icon>
+          </button>
+          <button
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-black rounded-sm"
+          >
+            <mat-icon class="text-white">close</mat-icon>
+          </button>
+          <button
+            class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 mx-auto hover:shadow-none bg-blue-500 rounded-sm"
+          >
+            <mat-icon class="text-white">discord</mat-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
