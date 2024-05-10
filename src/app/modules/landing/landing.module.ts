@@ -10,6 +10,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingRoutingModule } from './landing.routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatButtonToggleModule,
     LandingRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ]
 })
 export class LandingModule { }
