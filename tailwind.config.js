@@ -28,9 +28,9 @@ module.exports = {
       width: {
         'cus-45': '45%',
       },
-      // lineHeight: {
-      //   'leading-extra-tight': '3rem',
-      // },
+      borderWidth: {
+        'half': '0.5px',
+      },
     },
   },
   plugins: [],
