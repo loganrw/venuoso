@@ -21,7 +21,11 @@ const routes: Routes = [
       {
         path: 'about-us',
         loadChildren: () => import('./modules/about-us/about-us.module').then((m) => m.AboutUsModule),
-      }
+      },
+      {
+        path: 'event-editor',
+        loadChildren: () => import('./components/event-editor/event-editor.module').then((m) => m.EventEditorModule),
+      },
     ]
   },
   {

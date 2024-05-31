@@ -2,6 +2,7 @@
   [class]="
     isSticky
       ? 'z-50 fixed left-1/2 transform -translate-x-1/2 bg-slate-800 text-white transition-colors duration-1000 ease-in-out w-5/6 rounded-b-md'
+      ? 'z-50 fixed left-1/2 transform -translate-x-1/2 bg-slate-800 text-white transition-colors duration-1000 ease-in-out w-5/6 rounded-b-md'
       : 'z-50 fixed top-0 left-1/2 transform -translate-x-1/2 bg-slate-100 text-black transition-colors duration-1000 ease-in-out w-5/6 rounded-b-md'
   "
 >
@@ -11,8 +12,8 @@
     </div>
 
     <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-10">
+    <div class="absolute left-1/2 transform -translate-x-1/2 flex space-x-10">
       <a
-        href="#features"
         (click)="scrollToSection($event, 'features')"
         [class]="
           isSticky
@@ -22,7 +23,6 @@
         >HOW IT WORKS</a
       >
       <a
-        href="#pricing"
         (click)="scrollToSection($event, 'pricing')"
         [class]="
           isSticky
@@ -32,7 +32,6 @@
         >PRICING</a
       >
       <a
-        href="#contact-us"
         (click)="scrollToSection($event, 'contact-us')"
         [class]="
           isSticky
@@ -40,10 +39,10 @@
             : 'hover:cursor-pointer hover:text-black hover:font-bold'
         "
         >CONTACT US</a
+        >CONTACT US</a
       >
       <a
-        routerLink="/about-us"
-        (click)="scrollToSection($event, 'contact-us')"
+      (click)="navigateToAboutUs()"
         [class]="
           isSticky
             ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
@@ -51,6 +50,7 @@
         "
         >ABOUT</a
       >
+
     </div>
 
     <div class="flex-grow flex justify-end space-x-3 col-start-3">
@@ -58,15 +58,21 @@
         [class]="
           isSticky
             ? ' shadow-inner shadow-violet-400 rounded text-white bg-purple-500 py-2 px-2 hover:bg-purple-600 text-sm text-shadow-lg;'
+            ? ' shadow-inner shadow-violet-400 rounded text-white bg-purple-500 py-2 px-2 hover:bg-purple-600 text-sm text-shadow-lg;'
             : 'hidden'
         "
       >
         GET STARTED
+        GET STARTED
       </button>
+
+
       <button
-        (click)="navigateToPage('log-in')"
+        (click)="navigateToLogIn()"
         [class]="
           isSticky
+            ? 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 py-2 px-2 hover:bg-blue-700 text-sm'
+            : 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 py-2 px-2 hover:bg-blue-700 text-sm'
             ? 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 py-2 px-2 hover:bg-blue-700 text-sm'
             : 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 py-2 px-2 hover:bg-blue-700 text-sm'
         "

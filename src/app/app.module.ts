@@ -10,6 +10,7 @@ import { ContactFormService } from "./services/contact-form/contact-form.service
 import { BrowserModule } from "@angular/platform-browser";
 import { AboutUsModule } from "./modules/about-us/about-us.module";
 import { MatIconModule } from '@angular/material/icon';
+import { EventEditorModule } from "./components/event-editor/event-editor.module";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { MatIconModule } from '@angular/material/icon';
         BrowserModule,
         AboutUsModule,
         MatIconModule,
+        EventEditorModule
     ],
     providers: [
         provideAnimationsAsync(),
