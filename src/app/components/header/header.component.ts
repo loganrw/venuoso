@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  templateUrl: './header.component.html',
 })
 // Header scroll threshold before it becomes a sticky
 // Header scroll threshold before it becomes a sticky
@@ -48,18 +47,19 @@ export class HeaderComponent {
         });
       }
     }
-    // Method to navigate to the log-in module
-    navigateToLogIn() {
-      this.router.navigate(['/log-in']).then(() => {
-        // Scroll to top of the page after navigation to a new module
-        window.scrollTo(0, 0);
-      });
-    }
-    // Method to navigate to the about-us module
-    navigateToAboutUs() {
-      this.router.navigate(['/about-us']).then(() => {
-        // Scroll to top of the page after navigation to a new module
-        window.scrollTo(0, 0);
-      });
-    }
   }
+  // Method to navigate to the log-in module
+  navigateToLogIn() {
+    this.router.navigate(['/log-in']).then(() => {
+      // Scroll to top of the page after navigation to a new module
+      window.scrollTo(0, 0);
+    });
+  }
+  // Method to navigate to the about-us module
+  navigateToAboutUs() {
+    this.router.navigate(['/about-us']).then(() => {
+      // Scroll to top of the page after navigation to a new module
+      window.scrollTo(0, 0);
+    });
+  }
+}
