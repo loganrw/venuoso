@@ -1,13 +1,13 @@
 <div
-  class="w-full h-full flex justify-center items-center overflow-hidden py-16 bg-cover bg-gradient-to-tr from-blue-200 to-violet-300"
+  class="py-10 w-full h-full flex justify-center items-center overflow-hidden bg-cover bg-gradient-to-tr from-blue-200 to-violet-400"
   id="log-in"
 >
   <div
-    class="grid grid-cols-2 w-2/3 h-5/6 gap-0 bg-white rounded-lg shadow-sm shadow-gray-700"
+    class="grid grid-cols-1 md:grid-cols-2 w-5/6 md:w-5/6 lg:w-1/2 h-auto md:h-2/3 lg:h-2/3 gap-0 bg-white rounded-lg shadow-sm shadow-gray-700"
   >
     <!-- Left side with static image -->
     <div
-      class="bg-slate-100 col-span-1 p-2 rounded-l-lg bg-cover"
+      class="hidden sm:block bg-slate-100 col-span-1 p-2 rounded-l-lg bg-cover w-full"
       style="background-image: url('/assets/images/login_temp.jpg')"
     ></div>
 
@@ -123,10 +123,12 @@
             Forgot Password?
           </div>
 
-        <!-- Always visible social buttons -->
+          <!-- Always visible social buttons -->
         </div>
         <div class="w-full text-center mt-5">Quick login with</div>
-        <div class="grid grid-cols-4 items-center p-4 gap-2 w-full">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 items-center p-4 gap-4 md:gap-2 w-full"
+        >
           <button
             class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-blue-700 rounded-sm"
           >
@@ -152,7 +154,8 @@
             <mat-icon class="text-white">discord</mat-icon>
             <span class="text-white pl-1">Discord</span>
           </button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
