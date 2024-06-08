@@ -9,6 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+      },
+      fontSize: {
+        'xxs': '20.0rem',
+      },
       colors: {
         'v-light-purple': '#71677c',
         'v-purple': '#49184f',
