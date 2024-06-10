@@ -3,18 +3,18 @@
   id="log-in"
 >
   <div
-    class="grid grid-cols-1 md:grid-cols-2 w-5/6 md:w-5/6 lg:w-1/2 h-3/4 md:h-2/3 lg:h-2/3 bg-white rounded-lg shadow-sm shadow-gray-700"
+    class="grid grid-cols-1 md:grid-cols-2 w-5/6 md:w-5/6 lg:w-2/3 h-3/4 md:h-5/6 bg-white rounded-lg shadow-sm shadow-gray-700"
   >
     <!-- Left side with static image -->
     <div
-      class="hidden sm:block bg-slate-100 col-span-1 p-2 rounded-l-lg bg-cover w-full"
+      class="hidden md:block bg-slate-100 col-span-1 p-2 bg-cover w-full rounded-l-lg"
       style="background-image: url('/assets/images/login_temp.jpg')"
     ></div>
 
     <!-- Right side with form -->
     <form formGroup="signin" class="w-full">
       <div class="w-full">
-        <!-- Sign up / Login switch -->N
+        <!-- Sign up / Login switch -->
         <div
           class="flex justify-evenly text-slate-300 text-lg font-bold w-full bg-gray-300 rounded-tr-lg"
           id="sign-up"
@@ -119,15 +119,15 @@
           >
             LOGIN &rarr;
           </button>
-          <div *ngIf="mode === 'login'" class="text-black mt-5 text-center">
+          <div *ngIf="mode === 'login'" class="text-black mt-5 text-center font-bold">
             Forgot Password?
           </div>
 
           <!-- Always visible social buttons -->
         </div>
-        <div class="w-full text-center mt-5">Quick login with</div>
+        <div class="w-full text-center mt-10">Quick login with</div>
         <div
-          class="grid grid-cols-1 md:grid-cols-4 items-center p-4 gap-4 md:gap-2 w-full"
+          class="grid grid-cols-1 md:grid-cols-4 p-4 m-2 gap-6 md:gap-2 w-1/2 md:w-full mx-auto"
         >
           <button
             class="flex justify-center items-center ring-1 ring-gray-700 shadow-md shadow-gray-600 p-1 hover:shadow-none bg-blue-700 rounded-sm"
