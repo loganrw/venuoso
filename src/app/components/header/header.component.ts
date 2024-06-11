@@ -5,11 +5,15 @@ import { Router } from '@angular/router';
   selector: 'app-header',
   templateUrl: './header.component.html',
 })
-// Header scroll threshold before it becomes a sticky
-// Header scroll threshold before it becomes a sticky
+
 export class HeaderComponent {
-  isSticky: boolean = false;
-  scrollThreshold: number = 600;
+  // isMenuOpen = false; //Responsive menu for mobile screen view
+  isSticky: boolean = false; //Navigation sticky
+  scrollThreshold: number = 600; //eader scroll threshold before it becomes a sticky
+
+  // toggleMenu(){
+  //   this.isMenuOpen = !this.isMenuOpen;
+  // }
 
   constructor(private router: Router) { }
 

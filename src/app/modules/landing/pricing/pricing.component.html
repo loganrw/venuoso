@@ -1,15 +1,15 @@
-<div class="flex flex-col items-center bg-slate-800 py-20" id="pricing">
-  <div class="grid grid-cols-4 gap-6 w-5/6 mx-auto">
+<div class="flex flex-col items-center bg-slate-800 py-20 w-full" id="pricing">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-5/6 mx-auto">
     <!-- Title Plan Card -->
-    <div class="p-4 text-white rounded-md">
-      <p class="font-extrabold text-6xl">
-        PICK YOUR PLAN<br />
-        →→→
+    <div class="p-4 text-white rounded-md text-center md:text-left">
+      <p class="font-extrabold text-4xl lg:text-6xl">
+        START YOUR PLAN TODAY<br />
+        <span class="hidden md:block">→→→</span>
       </p>
     </div>
 
     <!-- Card 1 -->
-    <div class="p-4 bg-white text-black rounded-md text-center">
+    <div class="p-2 bg-white text-black rounded-md text-center">
       <p class="font-extrabold text-2xl">
         <img
           src="assets/images/pricing_ribbon.png"
@@ -18,7 +18,7 @@
         <br />BASIC
       </p>
       <hr class="w-auto border-1 border-slate-900" />
-      <p class="pt-4 text-3xl">$29.99 USD/month</p>
+      <p class="pt-4 text-2xl md:text-1xl lg:text-3xl">$29.99 USD/month</p>
       <p>
         <button
           class="bg-purple-400 rounded-md p-2 text-md shadow-sm shadow-black active:shadow-none"
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="p-4 bg-white text-black rounded-md text-center">
+    <div class="p-2 bg-white text-black rounded-md text-center">
       <p class="font-extrabold text-2xl">
         <img
           src="assets/images/pricing_ribbon.png"
@@ -38,7 +38,7 @@
         <br />PRO
       </p>
       <hr class="w-auto border-1 border-gray-900" />
-      <p class="pt-4 text-3xl">$49.99 USD/month</p>
+      <p class="pt-4 text-2xl md:text-1xl lg:text-3xl">$49.99 USD/month</p>
       <p>
         <button
           class="bg-purple-400 rounded-md p-2 text-md shadow-sm shadow-black active:shadow-none"
@@ -50,7 +50,7 @@
 
     <!-- Card 3 -->
     <div
-      class="p-4 bg-white text-black rounded-md text-center border border-blue-100"
+      class="p-2 bg-white text-black rounded-md text-center border border-blue-100"
     >
       <p class="font-extrabold text-2xl">
         <img
@@ -60,7 +60,7 @@
         <br />PRO MAX
       </p>
       <hr class="w-auto border-1 border-gray-900" />
-      <p class="pt-4 text-3xl">$199.99 USD/month</p>
+      <p class="pt-4 text-2xl md:text-1xl lg:text-3xl">$199.99 USD/month</p>
       <p>
         <button
           class="bg-purple-400 rounded-md p-2 text-md shadow-sm shadow-black active:shadow-none"
@@ -71,6 +71,7 @@
     </div>
   </div>
 
+  <!-- Features table -->
   <div class="w-5/6 mx-auto overflow-x-auto rounded-md my-6">
     <table class="w-full text-blue-200 text-md">
       <thead>
@@ -79,97 +80,97 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_list.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Custom Templates
+            Plans
           </td>
-          <td class="text-left p-4 w-1/4">5</td>
-          <td class="text-left p-4 w-1/4">50</td>
-          <td class="text-left p-4 w-1/4">Unlimited</td>
+          <td class="text-left p-4 w-1/4">BASIC</td>
+          <td class="text-left p-4 w-1/4">PRO</td>
+          <td class="text-left p-4 w-1/4">MAX</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_cog.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Chat Support
+            Support
           </td>
           <td class="text-left p-4 w-1/4">FCFS</td>
           <td class="text-left p-4 w-1/4">High</td>
-          <td class="text-left p-4 w-1/4">Priority Queue</td>
+          <td class="text-left p-4 w-1/4">Priority</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_home.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 3
+            Item3
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_lock.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 4
+            Item4
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_icon.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 5
+            Item5
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_icon.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 6
+            Item6
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_icon.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 7
+            Item7
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
         </tr>
-        <tr class="border-y border-slate-400">
+        <tr class="border-y border-slate-500">
           <td class="text-left p-4 flex items-center">
             <img
               src="assets/images/pricing_icon.png"
               class="inline-block mr-2 h-5 w-5"
             />
-            Item Type 8
+            Item8
           </td>
           <td class="text-left p-4 w-1/4">Yes</td>
           <td class="text-left p-4 w-1/4">Yes</td>
