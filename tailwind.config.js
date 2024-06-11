@@ -24,6 +24,7 @@ module.exports = {
         'v-purple-hover': "#5a2260",
         'v-blue': '#91a6b8',
         'v-light-blue-gray': '#f2f5fc',
+        'v-light-blue-gray': '#f2f5fc',
         'v-rose': '#945d5e',
         'v-tan': '#dda77b'
       },

@@ -15,7 +15,7 @@ export class HeaderComponent {
   //   this.isMenuOpen = !this.isMenuOpen;
   // }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   // If header scroll position is greater than scroll threshold then make header sticky
   @HostListener('window:scroll', ['$event'])
@@ -33,16 +33,23 @@ export class HeaderComponent {
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' });
       }
-    } else {
-      // If the current route is not landing, first load the landing module and then smooth-scroll to section
-      this.router.navigate(['/landing'], { fragment: sectionId }).then(() => {
-        setTimeout(() => {
-          const sectionElement = document.getElementById(sectionId);
-          if (sectionElement) {
-            sectionElement.scrollIntoView({ behavior: 'smooth' });
-          }
+      // If the current route is landing, scroll to section
+      if (this.router.url.includes('landing')) {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          sectionElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If the current route is not landing, first load the landing module and then smooth-scroll to section
+        this.router.navigate(['/landing'], { fragment: sectionId }).then(() => {
+          setTimeout(() => {
+            const sectionElement = document.getElementById(sectionId);
+            if (sectionElement) {
+              sectionElement.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
         });
-      });
+      }
     }
   }
   // Method to navigate to the log-in module
