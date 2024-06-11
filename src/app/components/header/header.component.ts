@@ -24,6 +24,7 @@ export class HeaderComponent {
     this.isSticky = scrollPosition > this.scrollThreshold;
   }
 
+
   // ScrollToSection function to scroll to a section
   scrollToSection(event: Event, sectionId: string): void {
     event.preventDefault();
@@ -33,23 +34,16 @@ export class HeaderComponent {
       if (sectionElement) {
         sectionElement.scrollIntoView({ behavior: 'smooth' });
       }
-      // If the current route is landing, scroll to section
-      if (this.router.url.includes('landing')) {
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-          sectionElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
-        // If the current route is not landing, first load the landing module and then smooth-scroll to section
-        this.router.navigate(['/landing'], { fragment: sectionId }).then(() => {
-          setTimeout(() => {
-            const sectionElement = document.getElementById(sectionId);
-            if (sectionElement) {
-              sectionElement.scrollIntoView({ behavior: 'smooth' });
-            }
-          });
+    } else {
+      // If the current route is not landing, first load the landing module and then smooth-scroll to section
+      this.router.navigate(['/landing'], { fragment: sectionId }).then(() => {
+        setTimeout(() => {
+          const sectionElement = document.getElementById(sectionId);
+          if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth' });
+          }
         });
-      }
+      });
     }
   }
   // Method to navigate to the log-in module
