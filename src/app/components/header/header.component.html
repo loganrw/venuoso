@@ -1,91 +1,232 @@
-<div [class]="
+<div
+  [class]="
     isSticky
-      ? 'z-50 fixed w-full lg:w-5/6 lg:rounded-b-md left-1/2 transform -translate-x-1/2 bg-slate-800 text-white transition-colors duration-1000 ease-in-out'
-      : 'z-50 fixed w-full lg:w-5/6 lg:rounded-b-md top-0 left-1/2 transform -translate-x-1/2 bg-slate-100 :bg-red-500 text-black transition-colors duration-1000 ease-in-out'
+      ? 'z-50 fixed w-full lg:w-5/6 lg:rounded-b-md left-1/2 transform -translate-x-1/2 text-white bg-slate-800 transition-colors duration-1000 ease-in-out'
+      : 'z-50 fixed w-full lg:w-5/6 lg:rounded-b-md top-0 left-1/2 transform -translate-x-1/2 bg-slate-100 text-black transition-colors duration-1000 ease-in-out'
   "
 >
-  <div class="flex flex-col-2 items-center px-2 md:py-2">
-    <!-- Left side logo -->
-    <div class="flex-none w-16 h-216 col-start-1">
+  <div class="flex items-center justify-between h-12 md:h-16 px-6 md:py-2">
+    <!-- Toggle menu button -->
+    <button
+      class="flex items-center md:hidden focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <!-- Hamburger icon -->
+      <svg
+        *ngIf="!isMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+
+      <!-- X icon -->
+      <svg
+        *ngIf="isMenuOpen"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+
+    <!-- Venuoso logo -->
+    <div class="flex items-center ml-2 md:ml-4 md:py-2">
       <img
         src="../../../assets/v-logo-small.png"
-        class="opacity-50 sm:w-2/3 sm:h-2/3"
+        class="hidden lg:flex opacity-50 md:w-16 md:h-16"
       />
+      <span class="md:hidden text-lg ml-2"> VENUOSO </span>
     </div>
 
-    <!-- Hamburger menu button (currently on) -->
-    <!-- <div>
-      <button></button>
-    </div> -->
-
-    <!-- Navigation menu -->
+    <!-- Md- and Lg-sized navigation menu -->
     <div
-      class="absolute left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-7 md:gap-2 items-center"
+      class="hidden md:flex justify-center mx-auto space-x-3 md:space-x-7 md:gap-2 items-center"
     >
-      <a
-        (click)="scrollToSection($event, 'features')"
-        [class]="
-          isSticky
-            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
-            : 'hover:cursor-pointer hover:text-black hover:font-bold'
-        "
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 flex space-x-3 md:space-x-7 md:gap-2 items-center"
       >
-        <span class="hidden md:block md:text-lg">INFO</span>
-      </a>
-      <a
-        (click)="scrollToSection($event, 'pricing')"
-        [class]="
-          isSticky
-            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
-            : 'hover:cursor-pointer hover:text-black hover:font-bold'
-        "
-      >
-        <span class="sm:block sm:text-xxs md:block md:text-lg">PRICING</span>
-      </a>
-      <a
-        (click)="scrollToSection($event, 'contact-us')"
-        [class]="
-          isSticky
-            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
-            : 'hover:cursor-pointer hover:text-black hover:font-bold'
-        "
-      >
-        <span class="sm:block sm:text-xxs md:block md:text-lg">CONTACT</span>
-      </a>
-      <a
-        (click)="navigateToAboutUs()"
-        [class]="
-          isSticky
-            ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
-            : 'hover:cursor-pointer hover:text-black hover:font-bold'
-        "
-      >
-        <span class="hidden md:block sm:text-xxs md:text-lg">ABOUT</span>
-      </a>
-
-      <!-- Navigation buttons -->
-      <div class="flex flex-grow gap-2 md:gap-4 cols-start-1">
-        <button
+        <a
+          (click)="scrollToSection($event, 'features')"
           [class]="
             isSticky
-              ? 'shadow-inner shadow-violet-400 rounded text-white bg-purple-500 p-1 hover:bg-purple-600 text-sm text-shadow-l whitespace-nowrap'
-              : 'hidden'
+              ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+              : 'hover:cursor-pointer hover:text-black hover:font-bold'
           "
         >
-          <span class="sm-text-xxs md:text-md md:px-4">SIGN UP</span>
-        </button>
-
-        <button
-          (click)="navigateToLogIn()"
+          <span class="hidden md:block md:text-lg cursor-pointer"
+            >FEATURES</span
+          >
+        </a>
+        <a
+          (click)="scrollToSection($event, 'pricing')"
           [class]="
             isSticky
-              ? 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 p-1 hover:bg-blue-700 text-sm'
-              : 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 p-1 hover:bg-blue-700 text-sm'
+              ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+              : 'hover:cursor-pointer hover:text-black hover:font-bold'
           "
         >
-          <span class="md:px-4">LOGIN</span>
-        </button>
+          <span class="sm:block sm:text-xxs md:block md:text-lg cursor-pointer"
+            >PRICING</span
+          >
+        </a>
+        <a
+          (click)="scrollToSection($event, 'contact-us')"
+          [class]="
+            isSticky
+              ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+              : 'hover:cursor-pointer hover:text-black hover:font-bold'
+          "
+        >
+          <span class="sm:block sm:text-xxs md:block md:text-lg cursor-pointer"
+            >CONTACT</span
+          >
+        </a>
+        <a
+          (click)="navigateToAboutUs()"
+          [class]="
+            isSticky
+              ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+              : 'hover:cursor-pointer hover:text-black hover:font-bold'
+          "
+        >
+          <span class="hidden md:block sm:text-xxs md:text-lg cursor-pointer"
+            >ABOUT</span
+          >
+        </a>
+
+        <!-- Header navigation buttons -->
+        <div class="flex flex-grow gap-2 md:gap-4 cols-start-1">
+          <button
+            [class]="
+              isSticky
+                ? 'shadow-inner shadow-violet-400 rounded text-white bg-purple-500 p-1 hover:bg-purple-600 text-sm text-shadow-l whitespace-nowrap'
+                : 'hidden'
+            "
+          >
+            <span class="sm-text-xxs md:text-md md:px-4">SIGN UP</span>
+          </button>
+
+          <button
+            (click)="navigateToLogIn()"
+            [class]="
+              isSticky
+                ? 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 p-1 hover:bg-blue-700 text-sm'
+                : 'shadow-inner shadow-blue-500 rounded text-white bg-blue-600 p-1 hover:bg-blue-700 text-sm'
+            "
+          >
+            <span class="md:px-4">LOGIN</span>
+          </button>
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Hamburger navigation -->
+  <div
+    class="flex-col w-full h-screen p-2 text-2xl"
+    [ngClass]="{
+      'flex h-4/5 bg-cover bg-gradient-to-t from-violet-950 to-slate-800 text-white px-5':
+        isMenuOpen,
+      hidden: !isMenuOpen
+    }"
+  >
+    <!-- Hamburger navigation buttons -->
+    <a
+      (click)="scrollToSection($event, 'features'); toggleMenu()"
+      [class]="
+        isSticky
+          ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+          : 'hover:cursor-pointer hover:text-black hover:font-bold'
+      "
+    >
+      <div class="mx-4 my-3 cursor-pointer text-md">
+        <span class="block text-md justify-between">Features</span>
+        <span
+          class="block text-sm justify-between font-thin italic text-gray-400"
+          >See what Venuoso can do for you</span
+        >
+      </div>
+    </a>
+    <a
+      (click)="scrollToSection($event, 'pricing'); toggleMenu()"
+      [class]="
+        isSticky
+          ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+          : 'hover:cursor-pointer hover:text-black hover:font-bold'
+      "
+    >
+      <div class="mx-4 my-3 cursor-pointer text-md">
+        <span class="block text-md justify-between">Pricing</span>
+        <span
+          class="block text-sm justify-between font-thin italic text-gray-400"
+          >Check out our plans</span
+        >
+      </div>
+    </a>
+    <a
+      (click)="scrollToSection($event, 'contact-us'); toggleMenu()"
+      [class]="
+        isSticky
+          ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+          : 'hover:cursor-pointer hover:text-black hover:font-bold'
+      "
+    >
+      <div class="mx-4 my-3 cursor-pointer text-md">
+        <span class="block text-md justify-between">Contact</span>
+        <span
+          class="block text-sm justify-between font-thin italic text-gray-400"
+          >Send us a message</span
+        >
+      </div>
+    </a>
+    <a
+      (click)="navigateToAboutUs(); toggleMenu()"
+      [class]="
+        isSticky
+          ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+          : 'hover:cursor-pointer hover:text-black hover:font-bold'
+      "
+    >
+      <div class="mx-4 my-3 cursor-pointer text-md">
+        <span class="block text-md justify-between">About</span>
+        <span
+          class="block text-sm justify-between font-thin italic text-gray-400"
+          >Meet the team</span
+        >
+      </div>
+    </a>
+    <hr class="m-6 h-px bg-white border-0" />
+
+    <div class="flex flex-col m-4 py-2">
+      <button
+        class="shadow-inner shadow-blue-500 rounded text-white bg-blue-600 p-3 text-sm border-half border-blue-400 cursor-pointer"
+        (click)="navigateToLogIn(); toggleMenu()"
+      >
+        <span class="text-3xl">LOGIN</span>
+      </button>
+      <span class="p-4 text-center font-thin text-gray-400 text-md">or</span>
+      <button
+        class="shadow-inner shadow-violet-400 rounded text-white bg-purple-500 p-3 text-sm text-shadow-l whitespace-nowrap border-half border-violet-300 cursor-pointer"
+      >
+        <span class="text-3xl">SIGN UP</span>
+      </button>
     </div>
   </div>
 </div>
