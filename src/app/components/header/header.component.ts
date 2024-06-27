@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent {
-  // isMenuOpen = false; //Responsive menu for mobile screen view
+  isMenuOpen = false; //Responsive menu for mobile screen view
   isSticky: boolean = false; //Navigation sticky
   scrollThreshold: number = 600; //eader scroll threshold before it becomes a sticky
 
-  // toggleMenu(){
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
+  toggleMenu(){
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   constructor(private router: Router) { }
 
