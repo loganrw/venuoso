@@ -11,6 +11,10 @@ const routes: Routes = [
                 path: '',
                 pathMatch: 'full',
                 component: LandingPageComponent
+            },
+            {
+                path: 'landing',
+                component: LandingPageComponent
             }
         ]
     }
