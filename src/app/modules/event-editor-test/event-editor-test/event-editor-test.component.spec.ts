@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EventEditorTestComponent } from './event-editor-test.component';
 
 describe('EventEditorTestComponent', () => {
