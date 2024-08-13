@@ -60,4 +60,11 @@ export class HeaderComponent {
       window.scrollTo(0, 0);
     });
   }
+  // Method to navigate to the event-editor module
+  navigateToEventEditorTest() {
+    this.router.navigate(['/event-editor-test']).then(() => {
+      // Scroll to top of the page after navigation to a new module
+      window.scrollTo(0, 0);
+    });
+  }
 }

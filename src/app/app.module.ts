@@ -11,6 +11,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AboutUsModule } from "./modules/about-us/about-us.module";
 import { MatIconModule } from '@angular/material/icon';
 import { EventEditorModule } from "./components/event-editor/event-editor.module";
+import { EventEditorTestModule } from "./modules/event-editor-test/event-editor-test.module";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { EventEditorModule } from "./components/event-editor/event-editor.module
         BrowserModule,
         AboutUsModule,
         MatIconModule,
-        EventEditorModule
+        EventEditorModule,
+        EventEditorTestModule
     ],
     providers: [
         provideAnimationsAsync(),

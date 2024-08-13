@@ -110,6 +110,18 @@
             >ABOUT</span
           >
         </a>
+        <a
+          (click)="navigateToEventEditorTest()"
+          [class]="
+            isSticky
+              ? 'hover:cursor-pointer hover:text-blue-300 hover:font-semibold'
+              : 'hover:cursor-pointer hover:text-black hover:font-bold'
+          "
+        >
+          <span class="hidden md:block sm:text-xxs md:text-lg cursor-pointer"
+            >EVENT-EDITOR-TEST</span
+          >
+        </a>
 
         <!-- Header navigation buttons -->
         <div class="flex flex-grow gap-2 md:gap-4 cols-start-1">

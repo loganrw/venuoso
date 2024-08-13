@@ -26,6 +26,10 @@ const routes: Routes = [
         path: 'event-editor',
         loadChildren: () => import('./components/event-editor/event-editor.module').then((m) => m.EventEditorModule),
       },
+      {
+        path: 'event-editor-test',
+        loadChildren: () => import('./modules/event-editor-test/event-editor-test.module').then((m) => m.EventEditorTestModule),
+      },
     ]
   },
   {
